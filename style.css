@@ -7,19 +7,40 @@ src: local('Gravity Bold'), url('Gravity-Bold.woff') format('woff');
 
 
 body, html {
-    max-height: 97%;
     overflow: hidden;
+    height: 100%;
+    width: 100%;
     font-family: 'Gravity Bold';
+    color: rgb(54, 54, 54);
+}
+
+body {
+    background-color: #ffed4b;
+    transition: 1s;
+}
+
+.background{
+    opacity:1;
+    background-color: #fdcd3b;
+    position:fixed;
+    width:500%;
+    height:100%;
+    top:0px;
+    left: -500px;
+    z-index:-5;
+    transform:  rotate(10deg);
+    transition: 1s;
 }
 
 .title{
     margin: auto;
-    width: 50px;
+    width: 100px;
     height: 100px;
     letter-spacing: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2em;
 }
 
 .line{
@@ -36,7 +57,8 @@ body, html {
     bottom: 0;
     display: flex;
     justify-content: space-around;
-    background-color: white;
+    background-color: #ffed4b;
+    transition: 1s;
 }
 
 .footer p{
@@ -113,6 +135,7 @@ body, html {
     width: 200px;
     height: 100px;
     margin: 5px;
+    background-color: white;
 }
 
 .reels{

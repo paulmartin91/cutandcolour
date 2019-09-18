@@ -6,8 +6,8 @@
     </head>
 <body>
     
-
     <script>
+var bgToggle = 1;
         function navigation(button) {
             
             let ids = ["home", "client", "editing", "grading"];
@@ -24,14 +24,32 @@
                     }, 200)
                 }
             })
+            
+            let colorArr = ["#56E78C", "#F560DB", "#D20005", "#F54B51", "#4CBBF8", "#F66625", "#ffed4b", "#fdcd3b"]
+            
+            if (bgToggle % 2 == 0){
+                document.getElementById("background").style.backgroundColor = colorArr[bgToggle];
+                (bgToggle == 7) ? bgToggle = 0 : bgToggle++;
+                
+            } else {
+                console.log("yes")
+                document.body.style.backgroundColor = colorArr[bgToggle];
+                document.getElementById("footer").style.backgroundColor = colorArr[bgToggle];
+                (bgToggle == 7) ? bgToggle = 0 : bgToggle++;
+            }
+            
         }
     </script>
-
+    
+<!--    BACKGROUND-->
+    
+    <div id="background" class = "background"></div>
+    
 <!--HEADER-->
     
-    <h1 class = "title">
-        Cut & Colour
-    </h1>
+    <div class = "title">
+        Cut &<br> Colour
+    </div>
     <div class="line"></div>
     
 <!--NAV-->
@@ -107,7 +125,7 @@
     
 <!--    FOOTER-->
     
-    <div class="footer">
+    <div id="footer" class="footer">
     <p>To find out what we can bring to your project, get in touch at: <a href="hello@cutandcolour.tv">hello@cutandcolour.tv</a></p>
     </div>
     
