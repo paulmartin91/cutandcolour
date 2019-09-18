@@ -1,0 +1,136 @@
+@font-face {
+font-family: 'Gravity Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Gravity Bold'), url('Gravity-Bold.woff') format('woff');
+}
+
+
+body, html {
+    max-height: 97%;
+    overflow: hidden;
+    font-family: 'Gravity Bold';
+}
+
+.title{
+    margin: auto;
+    width: 50px;
+    height: 100px;
+    letter-spacing: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line{
+    height: 5px;
+    border-top: solid 2px; 
+}
+
+.footer{
+    height: 70px;
+    border-top: solid 2px; 
+    margin-top: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.footer p{
+    min-width: 800px;
+    text-align: center;
+}
+
+.navigation{
+    max-width: 900px;
+    display: flex;
+    height: 50px;
+    margin: auto;
+    justify-content: space-around;
+    cursor: default;
+}
+
+.navigation a:hover{
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.about{
+    margin: auto;
+    margin-top: 10px;
+    width: 700px;
+    display: ;
+}
+
+.images{
+    margin: auto;
+    width: 700px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./Images/magix-vegas-pro.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pastClients{
+    display: none;
+}
+
+.filter{
+    margin: auto;
+    width: 350px;
+    height: 50px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: default;
+}
+
+.filter a:hover{
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.pastClientsBox{
+    margin: auto;
+    max-width: 700px;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: scroll;
+}
+
+.client{
+    border: solid 1px;
+    width: 200px;
+    height: 100px;
+    margin: 5px;
+}
+
+.reels{
+    margin: auto;
+    margin-top: 50px;
+    width: 700px;
+    justify-content: center;
+    align-items: center;
+}
+
+.christian{
+    display: none;
+}
+
+.tim{
+    display: none;
+}
+
+#grading, #editing, #home, #client {
+    transition: 0.5s;
+}

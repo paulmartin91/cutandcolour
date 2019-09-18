@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body>
+    
+
+    <script>
+        function navigation(button) {
+            
+            let ids = ["home", "client", "editing", "grading"];
+            ids.forEach(x=>{
+                if (x!=button.target) {
+                    document.getElementById(x).style.opacity = "0";
+                    setTimeout(()=>{document.getElementById(x).style.display = "none";}, 200)
+                }  else {
+                    setTimeout(()=>{
+                    document.getElementById(x).style.display = "block";
+                    setTimeout(()=>{
+                    document.getElementById(x).style.opacity = "1";
+                    }, 200)
+                    }, 200)
+                }
+            })
+        }
+    </script>
+
+<!--HEADER-->
+    
+    <h1 class = "title">
+        Cut & Colour
+    </h1>
+    <div class="line"></div>
+    
+<!--NAV-->
+    
+    <div class = "navigation">
+        <a 
+           target = "home" 
+           onclick="navigation(this)">
+        Home</a>
+        <a 
+           target = "client"
+           onclick="navigation(this)">
+        Past Clients</a>
+         <a 
+           target = "editing"
+           onclick="navigation(this)">
+        Editing</a>
+         <a 
+           target = "grading"
+           onclick="navigation(this)">
+        Colour Grading</a>
+    </div>
+    
+<!--    ABOUT-->
+    
+    <div id = "home" class = "about">
+        <p>We are a focused creative duo providing quality edit and colour grading post production solutions. We are driven by narrative; dedicated to finding and fortifying the story whatever your vision.</p>
+         <div class = "images"></div>
+    </div>
+    
+    <div id = "client" class="pastClients">
+        <div class = "filter">
+            <a>All</a>
+            <p>|</p>
+            <a>Editing</a>
+            <p>|</p>
+            <a>Grading</a>
+        </div>
+        
+        <div class="pastClientsBox"> 
+            <div class="client"></div>
+            <div class="client"></div>
+            <div class="client"></div>
+            <div class="client"></div>
+            <div class="client"></div>
+            <div class="client"></div>
+            <div class="client"></div>
+            <div class="client"></div>
+            <div class="client"></div>
+            <div class="client"></div>
+            <div class="client"></div>
+            <div class="client"></div>
+        </div>
+    </div>
+    
+<!--    Christian-->
+    
+    <div id = "editing" class='christian'>
+        <div class="reels">
+            <iframe src="https://player.vimeo.com/video/351372942" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <p>Might be a good editor?</p>
+        </div>
+    </div>
+    
+<!--    TIM-->
+
+    <div id = "grading" class='tim'>    
+        <div class="reels">
+           <iframe src="https://player.vimeo.com/video/318546216" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <p>Bit of a twat</p>
+        </div>
+    </div>
+    
+<!--    FOOTER-->
+    
+    <div class="footer">
+    <p>To find out what we can bring to your project, get in touch at: <a href="hello@cutandcolour.tv">hello@cutandcolour.tv</a></p>
+    </div>
+    
+</body>
+</html>
